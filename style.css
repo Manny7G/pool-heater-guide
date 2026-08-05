@@ -1,82 +1,150 @@
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#eef7fb;
-    color:#333;
+/* Pool & Spa Guide - Main Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.hero{
-    background:linear-gradient(135deg,#0077b6,#00b4d8);
-    color:white;
-    text-align:center;
-    padding:50px 20px;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #f4f9fb;
+    color: #333;
 }
 
-.hero h1{
-    font-size:2.3rem;
-    margin-bottom:10px;
+
+header {
+    background: #006994;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
 }
 
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:25px;
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
 }
 
-.card{
-    background:white;
-    margin-bottom:25px;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+nav {
+    background: #004d6b;
+    padding: 12px;
+    text-align: center;
 }
 
-.card h2{
-    color:#0077b6;
-    margin-top:0;
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
 }
 
-.button{
-    display:inline-block;
-    margin-top:20px;
-    background:#0077b6;
-    color:white;
-    text-decoration:none;
-    padding:14px 24px;
-    border-radius:10px;
-    font-weight:bold;
-    transition:.3s;
+
+nav a:hover {
+    text-decoration: underline;
 }
 
-.button:hover{
-    background:#005f87;
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
 }
 
-ul,ol{
-    line-height:1.8;
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    color:#666;
-    background:white;
-    margin-top:40px;
+
+.card h2 {
+    color: #006994;
+    margin-bottom: 15px;
 }
 
-@media(max-width:768px){
 
-.hero h1{
-    font-size:1.8rem;
+.card p {
+    margin-bottom: 12px;
 }
 
-.card{
-    padding:18px;
+
+button {
+    background: #0088cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.button{
-    display:block;
-    text-align:center;
+
+button:hover {
+    background: #006994;
 }
+
+
+.info {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: #e9f7ff;
+    border-left: 5px solid #0088cc;
+}
+
+
+input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eef8ee;
+    border-radius: 8px;
+}
+
+
+footer {
+    background: #004d6b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* Mobile friendly design */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+
+    .container {
+        width: 95%;
+    }
 
 }
