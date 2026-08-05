@@ -1,104 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pool & Spa Guide</title>
 
-    <meta name="theme-color" content="#0077b6">
+    <title>Pool & Spa Heater Guide</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-<header class="hero">
-    <h1>🏊 Pool & Spa Guide</h1>
-    <p>Welcome! Follow the instructions below to safely operate the pool and spa.</p>
+<header>
+    <h1>Pool & Spa Heater Guide</h1>
+    <p>Your quick guide to understanding, operating, and maintaining your pool heating system.</p>
 </header>
 
-<main class="container">
 
-    <div class="card">
-        <h2>🔥 Heat the Pool</h2>
-        <p>Turn on the pool heater and set your desired temperature.</p>
+<nav>
+    <a href="#heaters">Heater Types</a>
+    <a href="#problems">Troubleshooting</a>
+    <a href="#maintenance">Maintenance</a>
+    <a href="#tips">Energy Tips</a>
+</nav>
 
-        <ol>
-            <li>Tap <strong>Heat / Cool</strong>.</li>
-            <li>Select the area you want to heat.</li>
-            <li>Slide the switch to <strong>ON</strong>.</li>
-            <li>Select your desired temperature.</li>
-            <li>Tap the ✔ checkmark to save.</li>
-        </ol>
 
-        <a class="button" href="#spa">Next: Spa Mode</a>
+<div class="container">
+
+
+<section class="card">
+    <h2>Welcome</h2>
+    <p>
+        This guide helps pool owners understand their heating system,
+        identify common issues, and keep their pool comfortable and efficient.
+    </p>
+</section>
+
+
+
+<section class="card" id="heaters">
+
+    <h2>Pool Heater Types</h2>
+
+    <p><strong>Gas Heaters:</strong> Fast heating and great for quickly warming pools and spas.</p>
+
+    <button class="info-button">Learn More</button>
+    <div class="info">
+        Gas heaters use natural gas or propane and are ideal when you need rapid temperature changes.
     </div>
 
-    <div class="card" id="spa">
-        <h2>♨️ Spa Only</h2>
 
-        <ol>
-            <li>Turn on the Filter Pump.</li>
-            <li>Select <strong>Spa</strong>.</li>
-            <li>Choose your temperature.</li>
-            <li>Wait approximately 15 seconds for the valves to switch.</li>
-            <li>Turn the heater ON.</li>
-        </ol>
+    <p><strong>Heat Pumps:</strong> Energy-efficient heating using outside air.</p>
 
-        <a class="button" href="#blower">Next: Blower</a>
+    <button class="info-button">Learn More</button>
+    <div class="info">
+        Heat pumps are excellent for maintaining steady temperatures while using less energy.
     </div>
 
-    <div class="card" id="blower">
 
-        <h2>💨 Blower / Jets</h2>
+    <p><strong>Solar Heating:</strong> Uses sunlight to warm pool water.</p>
 
-        <ol>
-            <li>Select <strong>Features</strong>.</li>
-            <li>Select Pool or Spa.</li>
-            <li>Tap <strong>Blower</strong>.</li>
-            <li>Slide the switch to ON.</li>
-        </ol>
-
-        <a class="button" href="#notes">Next: Notes</a>
-
+    <button class="info-button">Learn More</button>
+    <div class="info">
+        Solar systems have low operating costs but depend on sunlight availability.
     </div>
 
-    <div class="card" id="notes">
+</section>
 
-        <h2>⚠ Important Notes</h2>
 
-        <ul>
-            <li>Heating the pool can take approximately 3–4 hours.</li>
-            <li>The system enters Power Saving Mode around 6:00 PM.</li>
-            <li>Set the Pool Filter Pump to HIGH to exit Power Saving Mode.</li>
-            <li>Please turn the heater OFF after using the pool or spa.</li>
-            <li>Refill the pool after using the heater as instructed.</li>
-        </ul>
 
-    </div>
 
-    <div class="card">
+<section class="card" id="problems">
 
-        <h2>📖 Original Manual</h2>
+<h2>Common Problems</h2>
 
-        <p>Add your original PDF here so guests can view it if needed.</p>
+<ul>
+    <li>Heater will not turn on</li>
+    <li>Pool temperature is too low</li>
+    <li>Error codes appearing</li>
+    <li>Low water flow problems</li>
+    <li>Pump or filter issues</li>
+</ul>
 
-        <a class="button" href="POOL HEATER INSTRUCTION.pdf" target="_blank">
-            Open Manual
-        </a>
+</section>
 
-    </div>
 
-</main>
+
+
+<section class="card" id="maintenance">
+
+<h2>Maintenance Checklist</h2>
+
+<ul>
+    <li>Check filters regularly</li>
+    <li>Keep water chemistry balanced</li>
+    <li>Inspect heater connections</li>
+    <li>Remove debris around equipment</li>
+    <li>Schedule professional service when needed</li>
+</ul>
+
+</section>
+
+
+
+
+<section class="card" id="tips">
+
+<h2>Energy Saving Tips</h2>
+
+<ul>
+    <li>Use a pool cover when not swimming</li>
+    <li>Maintain proper water chemistry</li>
+    <li>Run heating during the most efficient hours</li>
+    <li>Keep equipment clean</li>
+</ul>
+
+</section>
+
+
+
+
+<section class="card">
+
+<h2>Temperature Helper</h2>
+
+<p>Enter your current pool temperature and desired temperature.</p>
+
+
+<label>Current Temperature:</label>
+<br>
+<input id="currentTemp" type="number" placeholder="Example: 75">
+
+<br>
+
+<label>Desired Temperature:</label>
+<br>
+<input id="desiredTemp" type="number" placeholder="Example: 82">
+
+<br>
+
+<button id="calculate">Calculate</button>
+
+
+<div id="result"></div>
+
+
+</section>
+
+
+</div>
+
+
 
 <footer>
 
-    <p>Pool & Spa Guide</p>
-    <p>Designed for easy mobile use.</p>
+<p>
+© <span id="year"></span> Pool & Spa Guide
+</p>
 
 </footer>
+
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
