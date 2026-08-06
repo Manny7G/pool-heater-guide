@@ -148,3 +148,42 @@ footer {
     }
 
 }
+.guide-menu {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    max-width: 800px;
+}
+
+.guide-menu h2 {
+    margin-top: 0;
+    color: #005f73;
+    text-align: center;
+}
+
+.guide-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.guide-menu li {
+    margin: 10px 0;
+}
+
+.guide-menu a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    background: #e9f7fb;
+    color: #003049;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.guide-menu a:hover {
+    background: #cdeef7;
+}
