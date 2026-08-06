@@ -1,189 +1,195 @@
-/* Pool & Spa Guide - Main Styles */
+/* Manny G Properties - Main Styles */
 
+/* Reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background: #f4f9fb;
+    background: #f7f7f7;
     color: #333;
+    line-height: 1.6;
 }
 
-
+/* Header */
 header {
-    background: #006994;
+    background: #0b2e4f;
     color: white;
-    padding: 30px 20px;
-    text-align: center;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4b400;
 }
 
 
-header h1 {
-    font-size: 2.2rem;
+/* Hero Section */
+.hero {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("images/property.jpg");
+
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: #f4b400;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #d99c00;
+}
+
+
+/* Sections */
+section {
+    padding: 50px 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 32px;
+    color: #0b2e4f;
+}
+
+
+/* Property Cards */
+.property-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.property-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.property-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 20px;
+}
+
+.property-info h3 {
+    color: #0b2e4f;
     margin-bottom: 10px;
 }
 
 
-nav {
-    background: #004d6b;
-    padding: 12px;
-    text-align: center;
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.service-box {
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.service-box h3 {
+    color:#0b2e4f;
 }
 
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
+/* Contact */
+.contact {
+    background:#0b2e4f;
+    color:white;
+    text-align:center;
 }
 
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 30px auto;
-}
-
-
-.card {
-    background: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-
-.card h2 {
-    color: #006994;
-    margin-bottom: 15px;
-}
-
-
-.card p {
-    margin-bottom: 12px;
-}
-
-
-button {
-    background: #0088cc;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-
-button:hover {
-    background: #006994;
-}
-
-
-.info {
-    display: none;
-    margin-top: 15px;
-    padding: 15px;
-    background: #e9f7ff;
-    border-left: 5px solid #0088cc;
-}
-
-
-input {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    margin: 8px 0 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-
-#result {
-    margin-top: 20px;
-    padding: 15px;
-    background: #eef8ee;
-    border-radius: 8px;
-}
-
-
+/* Footer */
 footer {
-    background: #004d6b;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 
 
-/* Mobile friendly design */
+/* Mobile Design */
+@media(max-width:768px){
 
-@media (max-width: 600px) {
-
-    header h1 {
-        font-size: 1.7rem;
+    header {
+        flex-direction:column;
+        text-align:center;
     }
 
-
-    nav a {
-        display: block;
-        margin: 10px 0;
+    nav ul {
+        flex-direction:column;
+        margin-top:20px;
     }
 
-
-    .container {
-        width: 95%;
+    .hero h1 {
+        font-size:32px;
     }
 
-}
-.guide-menu {
-    background: #ffffff;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    max-width: 800px;
-}
-
-.guide-menu h2 {
-    margin-top: 0;
-    color: #005f73;
-    text-align: center;
-}
-
-.guide-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.guide-menu li {
-    margin: 10px 0;
-}
-
-.guide-menu a {
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-    background: #e9f7fb;
-    color: #003049;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background 0.2s;
-}
-
-.guide-menu a:hover {
-    background: #cdeef7;
 }
